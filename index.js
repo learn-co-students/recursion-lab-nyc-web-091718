@@ -41,3 +41,11 @@ function addUpTo(arr, i) {
     return arr[i]
   }
 }
+
+function maxOf(arr) {
+  if (arr.length === 1) {
+    return arr[0]
+  } else {
+    return Math.max(arr.shift(), maxOf(arr))
+  }
+}
