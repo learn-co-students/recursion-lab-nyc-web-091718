@@ -32,3 +32,12 @@ function isPalindrome(string) {
 
   return false
 }
+
+
+function addUpTo(arr, i) {
+  if (i > 0) {
+    return arr[i] + addUpTo(arr, --i)
+  } else {
+    return arr[i]
+  }
+}
