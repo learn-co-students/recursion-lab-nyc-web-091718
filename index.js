@@ -49,3 +49,13 @@ function maxOf(arr) {
     return Math.max(arr.shift(), maxOf(arr))
   }
 }
+
+function includesNumber(arr, num) {
+  if (!arr.length) {
+    return false
+  } else if (arr[0] === num) {
+    return true
+  } else {
+    return includesNumber(arr.slice(1), num)
+  }
+}
