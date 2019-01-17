@@ -17,6 +17,18 @@ function reverseString(string) {
   }
 }
 
-function isPalindrome() {
+function isPalindrome(string) {
+  let str = string.toLowerCase()
+  let c1 = str.charAt(0)
+  let c2 = str.charAt(str.length - 1)
 
+  if (str.length < 2) {
+    return true
+  }
+
+  if (c1 === c2) {
+    return isPalindrome((str.substr(1, str.length - 2)))
+  }
+
+  return false
 }
